@@ -4,7 +4,7 @@ app = express();
 bodyParser = require("body-parser");
 var server = http.createServer(app);
 server.listen(80, () => {
-  console.log("server running");
+  console.log("server running v1");
 });
 app.use(express.static(__dirname + "/web"));
 app.use(bodyParser.json());
