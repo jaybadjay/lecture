@@ -4,7 +4,7 @@ app = express();
 bodyParser = require("body-parser");
 var server = http.createServer(app);
 server.listen(80, () => {
-  console.log("server running");
+  console.log("server running v1");
 });
 app.use(express.static(__dirname + "/web"));
 app.use(bodyParser.json());
@@ -31,6 +31,6 @@ io.on("connection", function (socket) {
     console.log(data);
     io.sockets
       .in(roomName)
-      .emit("recMsg", { comment: Id + " : " + data.comment + "\n" });
+      .emit("recMsg", { comment: instanceId + " : " + data.comment + "\n" });
   });
 });
