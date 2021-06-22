@@ -1,5 +1,5 @@
 var request = require("request");
-const url = "http://127.0.0.1";
+const url = "http://127.0.0.1/";
 async function post(url) {
   return new Promise(function (resolve, reject) {
     request(
